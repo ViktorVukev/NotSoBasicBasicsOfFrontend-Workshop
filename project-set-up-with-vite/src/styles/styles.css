@@ -10,6 +10,10 @@
   font-size: 1.6rem;
 }
 
+.font-bold {
+  font-weight: bold;
+}
+
 .clr-white {
   color: var(--white);
 }
@@ -35,8 +39,16 @@
   justify-content: space-between;
 }
 
+.justify-content-center {
+  justify-content: center;
+}
+
 .align-items-center {
   align-items: center;
+}
+
+.align-items-end {
+  align-items: end;
 }
 
 .gap-1 {
