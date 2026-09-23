@@ -5,12 +5,34 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="src/styles/reset.css" />
     <link rel="stylesheet" href="src/styles/design-tokens/design-tokens.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="src/styles/styles.css" />
+    <link rel="stylesheet" href="src/styles/main.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>project-set-up-with-vite</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <header
+      class="display-flex justify-content-space-between align-items-center"
+    >
+      <h1 class="font-size-heading clr-white">JustAnotherRepo</h1>
+      <nav class="display-flex gap-1">
+        <button class="btn-participants p-02" aria-label="Participants">
+          <i class="fa fa-user mr-05"></i>Participants
+        </button>
+
+        <!-- Participant dropdown -->
+        <div class="display-flex align-items-center participant-dropdown">
+          <i class="fa fa-user mr-05"></i>
+          <span>Viktor (You)</span>
+        </div>
+
+        <button class="btn btn-user border-radius-50">V</button>
+      </nav>
+    </header>
   </body>
+  <script type="module" src="/src/main.js"></script>
 </html>

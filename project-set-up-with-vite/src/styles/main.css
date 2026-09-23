@@ -1,0 +1,45 @@
+@import './design-tokens/design-tokens.css';
+
+header {
+  font-weight: bold;
+  padding: 0.6rem;
+  background-color: var(--clr-primary);
+  color: var(--white);
+  height: 3rem;
+}
+
+nav {
+  position: relative;
+}
+
+.btn-user {
+  background-color: var(--clr-info);
+  font-size: 1rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.btn-participants {
+  border: 1px solid transparent;
+}
+
+.btn-participants:hover {
+  border-color: var(--white);
+}
+
+.btn-participants:focus + .participant-dropdown,
+.btn-participants:focus-visible + .participant-dropdown {
+  display: flex;
+}
+
+.participant-dropdown {
+  display: none;
+  position: absolute;
+  top: 110%;
+  font-weight: normal;
+  background-color: var(--clr-bg-participants);
+  border: 1px solid var(--clr-border-participants);
+  border-radius: 8px;
+  color: var(--dark-blue);
+  padding: 0.4rem;
+}

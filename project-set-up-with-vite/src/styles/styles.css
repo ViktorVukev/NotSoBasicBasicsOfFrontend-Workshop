@@ -1,1 +1,44 @@
-@import './design-tokens/design-tokens.css';
+.mr-05 {
+  margin-right: 0.5rem;
+}
+
+.p-02 {
+  padding: 0.2rem;
+}
+
+.font-size-heading {
+  font-size: 1.6rem;
+}
+
+.clr-white {
+  color: var(--white);
+}
+
+.border-radius-50 {
+  border-radius: 50%;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
