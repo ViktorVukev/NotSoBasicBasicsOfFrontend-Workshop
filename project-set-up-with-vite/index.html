@@ -18,7 +18,7 @@
     <header
       class="display-flex justify-content-space-between align-items-center"
     >
-      <h1 class="font-size-heading clr-white">JustAnotherRepo</h1>
+      <h1 class="font-size-16rem clr-white">JustAnotherRepo</h1>
       <nav class="display-flex gap-1">
         <button class="btn-participants p-02" aria-label="Participants">
           <i class="fa fa-user mr-05"></i>Participants
@@ -33,23 +33,139 @@
         <button class="btn btn-user border-radius-50">V</button>
       </nav>
     </header>
-  </body>
 
-  <main>
-    <section class="sidebar-container">
-      <div
+    <main>
+      <section
         class="sidebar-upper-section display-flex align-items-end justify-content-center"
       >
         <h2 class="font-bold p-02">Retro board</h2>
-      </div>
-      <div
+      </section>
+      <section
         class="sidebar-lower-section display-flex align-items-end justify-content-center"
       >
         <h2 class="font-bold p-02">My notes</h2>
-      </div>
-    </section>
-    <div class="main-content">TODO</div>
-  </main>
+      </section>
+
+      <section class="category-containers mb-3 clr-black">
+        <i class="fa fa-ban display-inline font-size-15rem clr-danger"></i>
+        <h3 class="display-inline">Drop</h3>
+        <div class="drag-and-drop-area justify-content-space-around p-05">
+          <article class="note-card font-bold bg-danger">
+            <p>fsgrg</p>
+            <i class="fa fa-trash-o btn delete-btn"></i>
+            <i class="fa fa-pencil-square-o btn edit-btn"></i>
+          </article>
+          <article class="note-card font-bold bg-danger">
+            <p>fsgrg</p>
+            <i class="fa fa-trash-o btn delete-btn"></i>
+            <i class="fa fa-pencil-square-o btn edit-btn"></i>
+          </article>
+          <article class="note-card font-bold bg-danger">
+            <p>fsgrg</p>
+            <i class="fa fa-trash-o btn delete-btn"></i>
+            <i class="fa fa-pencil-square-o btn edit-btn"></i>
+          </article>
+        </div>
+      </section>
+
+      <section class="category-containers mb-3 clr-black">
+        <i
+          class="fa fa-plus-square-o display-inline font-size-15rem clr-success"
+        ></i>
+        <h3 class="display-inline">Add</h3>
+        <div class="drag-and-drop-area justify-content-space-around p-05">
+          <article class="note-card font-bold bg-success">
+            <p>fsgrg</p>
+            <i class="fa fa-trash-o btn delete-btn"></i>
+            <i class="fa fa-pencil-square-o btn edit-btn"></i>
+          </article>
+        </div>
+      </section>
+
+      <section class="category-containers mb-3 clr-black">
+        <i class="fa fa-star-o display-inline font-size-15rem clr-info"></i>
+        <h3 class="display-inline">Keep</h3>
+        <div class="drag-and-drop-area justify-content-space-around p-05">
+          <article class="note-card font-bold bg-info">
+            <p>fsgrg</p>
+            <i class="fa fa-trash-o btn delete-btn"></i>
+            <i class="fa fa-pencil-square-o btn edit-btn"></i>
+          </article>
+        </div>
+      </section>
+
+      <section class="category-containers mb-3 clr-black">
+        <i
+          class="fa fa-lightbulb-o display-inline font-size-15rem clr-warning"
+        ></i>
+        <h3 class="display-inline">Improve</h3>
+        <div class="drag-and-drop-area justify-content-space-around p-05">
+          <article class="note-card font-bold bg-warning">
+            <p>fsgrg</p>
+            <i class="fa fa-trash-o btn delete-btn"></i>
+            <i class="fa fa-pencil-square-o btn edit-btn"></i>
+          </article>
+        </div>
+      </section>
+
+      <section class="new-notes-container display-flex flex-column p-1">
+        <button class="btn justify-content-end">
+          <i class="fa fa-paper-plane-o mr-05"></i>Publish all
+        </button>
+        <div class="notes-row display-flex align-items-center gap-1">
+          <button class="new-note-btn clr-black">
+            <i class="fa fa-plus"></i>
+          </button>
+          <article class="note-card font-bold bg-danger clr-black">
+            <p>fsgrg</p>
+          </article>
+          <article class="note-card font-bold bg-info clr-black">
+            <p>fsgrg</p>
+          </article>
+          <article class="note-card font-bold bg-warning clr-black">
+            <p>fsgrg</p>
+          </article>
+          <article class="note-card font-bold bg-success clr-black">
+            <p>fsgrg</p>
+          </article>
+        </div>
+      </section>
+
+      <form class="add-note-container clr-black p-1">
+        <div
+          class="display-flex justify-content-space-between align-items-start mb-05"
+        >
+          <fieldset
+            class="choose-note-type-container display-flex align-items-center gap-1"
+          >
+            <legend class="mb-05 font-size-09rem">Choose Category:</legend>
+            <label class="fa fa-ban clr-danger note-type-radio">
+              <input type="radio" name="topic" value="drop" required />
+            </label>
+            <label class="fa fa-plus-square-o clr-success note-type-radio">
+              <input type="radio" name="topic" value="add" required />
+            </label>
+            <label class="fa fa-star-o clr-info note-type-radio">
+              <input type="radio" name="topic" value="keep" required />
+            </label>
+            <label class="fa fa-lightbulb-o clr-warning note-type-radio">
+              <input type="radio" name="topic" value="improve" required />
+            </label>
+          </fieldset>
+          <button class="btn justify-content-end">
+            <i class="fa fa-pencil-square-o mr-05"></i>
+            <span class="font-normal font-size-09rem">Add</span>
+          </button>
+        </div>
+
+        <textarea
+          class="clr-black"
+          placeholder="Type anything here..."
+          required
+        ></textarea>
+      </form>
+    </main>
+  </body>
 
   <script type="module" src="/src/main.js"></script>
 </html>

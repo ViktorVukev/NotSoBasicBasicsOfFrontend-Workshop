@@ -48,21 +48,19 @@ nav {
 
 /* Main Section */
 main {
-  display: grid;
-  grid-template: 60% 40% / 2.3rem repeat(4, 1fr);
-  height: calc(100vh - 3rem);
-}
+  min-height: calc(100dvh - 3rem);
+  height: auto;
 
-.sidebar-container {
-  background-color: var(--clr-bg-participants);
-  grid-column: 1 / 2;
-  grid-row: 1 / span 2;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 2.3rem repeat(4, 1fr);
+  column-gap: 1rem;
+  padding-right: 1rem;
+  background-color: var(--white);
 }
 
 .sidebar-upper-section {
-  height: 60%;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
   background-color: var(--clr-secondary);
   color: var(--dark-blue);
   > h2 {
@@ -71,7 +69,8 @@ main {
 }
 
 .sidebar-lower-section {
-  height: 40%;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
   background-color: var(--clr-primary);
   > h2 {
     color: var(--white);
@@ -89,4 +88,128 @@ main {
   background-color: var(--clr-bg-keep);
   grid-column: 2 / span 4;
   grid-row: 1 / span 2;
+}
+
+.category-containers {
+  margin-top: 1rem;
+}
+
+.drag-and-drop-area,
+.new-notes-container,
+.add-note-container {
+  border: 5px dotted var(--clr-tertiary);
+  border-radius: 1rem;
+}
+
+.drag-and-drop-area {
+  min-height: 100%;
+  display: grid;
+  grid-template: repeat(auto-fit, 150px) / repeat(auto-fit, 150px);
+  gap: 1rem;
+  border: 5px dotted var(--clr-tertiary);
+  border-radius: 1rem;
+}
+
+.drag-and-drop-area:has(> :only-child) {
+  justify-content: normal;
+}
+
+.drag-and-drop-area:has(> :nth-child(2)) {
+  justify-content: space-around;
+}
+
+.note-card {
+  position: relative;
+  padding: 0.3rem;
+  width: 150px;
+  height: 150px;
+}
+
+.delete-btn,
+.edit-btn {
+  position: absolute;
+  bottom: -0.5rem;
+  color: var(--white);
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.delete-btn {
+  right: 2.5rem;
+  background-color: var(--base-red);
+}
+
+.edit-btn {
+  right: 0.6rem;
+  background-color: var(--base-yellow);
+}
+
+.new-notes-container {
+  grid-column: 2 / span 3;
+  grid-row: 2 / span 1;
+  margin-bottom: 1rem;
+}
+
+.notes-row {
+  overflow: hidden;
+}
+
+.notes-row > * {
+  flex: 0 0 150px;
+}
+
+.add-note-container {
+  grid-column: 5 / span 1;
+  grid-row: 2 / span 1;
+  margin-bottom: 1rem;
+}
+
+.new-notes-container > .btn {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: var(--black);
+}
+
+.new-note-btn {
+  border: 5px dotted var(--black);
+  border-radius: 1rem;
+  width: 150px;
+  height: 150px;
+  font-size: 3rem;
+}
+
+.add-note-container > div {
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.note-type-radio {
+  font-size: 1.1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.choose-note-type-container {
+  border: none;
+}
+
+.note-type-radio input[type='radio'] {
+  appearance: none;
+  position: absolute;
+}
+
+.note-type-radio:has(input:checked) {
+  outline: 2px solid #04d9ff;
+  outline-offset: 2px;
+}
+
+.note-type-radio:hover {
+  opacity: 0.6;
+}
+
+.add-note-container textarea {
+  width: 100%;
+  border: none;
+  background-color: transparent;
 }
