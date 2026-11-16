@@ -6,6 +6,9 @@ import configPrettier from 'eslint-config-prettier';
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
   {
+    ignores: ['dist/**', 'server/**', 'src/counter.js'],
+  },
+  {
     languageOptions: {
       globals: globals.browser,
     },

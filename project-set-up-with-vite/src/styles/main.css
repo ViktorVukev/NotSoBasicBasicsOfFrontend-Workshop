@@ -46,6 +46,10 @@ nav {
   padding: 0.4rem;
 }
 
+.participant-dropdown.participants-modal__open {
+  display: flex;
+}
+
 /* Main Section */
 main {
   min-height: calc(100dvh - 3rem);
